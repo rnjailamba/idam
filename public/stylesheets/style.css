@@ -11246,3 +11246,8 @@ Custom
 	background-color: #ecf0f1;
 	/*background-color: #bdc3c7;*/
 }
+
+.cart-list li > div {
+     margin: 0 0 0 0px; 
+    padding: 10px 0 0;
+}
