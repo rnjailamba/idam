@@ -5,8 +5,8 @@
             sliderFx: 'crossfade',		// Slider effect. Can be 'scroll',
             // 'fade', 'crossfade', 'directscroll',
             // 'uncover', 'uncover-fade'
-            sliderInterval: 6000,		// Interval
-            sliderAuto: false,        // Default auto sliding
+            sliderInterval: 3000,		// Interval
+            sliderAuto: true,        // Default auto sliding
             speedAnimation: 600,        // Default speed of the animation
             defFx: 'easeInSine',        // Default animate Fx
             countdownTo: '2015/06/20',	// Change this in the format: 'YYYY/MM/DD'
