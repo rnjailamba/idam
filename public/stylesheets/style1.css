@@ -4029,9 +4029,9 @@ button:hover .ico-sidebar-r {
 }
 
 .headcontent {
-	padding: 46px 0;
+	padding: 20px 0;
 	position: relative;
-	min-height: 130px;
+	min-height: 50px;
 	background-color: #F2F2F2;
 }
 

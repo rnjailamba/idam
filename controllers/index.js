@@ -17,7 +17,7 @@ modules.winston.log('debug', 'Hello again distributed log files!');
 // ==============================================
 router.get('/', function(req, res){
 
-    res.render('index/ping', { title: 'Express' });
+    res.render('index/home', { title: 'Express' });
 
 });
 

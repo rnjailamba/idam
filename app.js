@@ -11,6 +11,7 @@ app.use('/bootstrap', modules.express.static(__dirname + '/node_modules/bootstra
 app.use('/node_modules', modules.express.static(__dirname + '/node_modules/'));
 app.use('/node_modules', modules.express.static(__dirname + '/node_modules/'));
 app.use('/css', modules.express.static(__dirname + '/public/stylesheets/'));
+app.use('/img', modules.express.static(__dirname + '/public/images/'));
 app.use('/js', modules.express.static(__dirname + '/public/javascripts/'));
 app.use(modules.flash()); // use connect-flash for flash messages stored in session
 app.set('superSecret', modules.config.secret); // secret variable
