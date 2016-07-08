@@ -11235,3 +11235,8 @@ Custom
 	height: 80px;
 	margin-top: 5px;
 }
+
+.bg-full-gray {
+	background-color: #ecf0f1;
+	/*background-color: #bdc3c7;*/
+}
