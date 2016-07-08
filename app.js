@@ -38,7 +38,6 @@ app.use(function(req, res, next) {
 
 var exportingApp = require("./helpers/exporters/export_app");
 exportingApp.exportApp(app);
-var initHelper = require("./helpers/initializeHelpers.js");//initialize database connections , twilio etc.
 var initControllers = require("./controllers/setup/initialize.js");//initialize database connections , twilio etc.
 
 // catch 404 and forward to error handler
