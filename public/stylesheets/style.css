@@ -1,9 +1,9 @@
-/*------------------------------------------------------------------ 
- [ Master Stylesheet ] 
+/*------------------------------------------------------------------
+ [ Master Stylesheet ]
 
- Project: Gatwick - Responsive Multipurpose Template 
- Version: 1.2 
- Last change: 22/04/15 
+ Project: Gatwick - Responsive Multipurpose Template
+ Version: 1.2
+ Last change: 22/04/15
  -------------------------------------------------------------------*/
 
  /*------------------------------------------------------------------
@@ -11226,4 +11226,12 @@ ul.twitter-list .date {
 	.mfp-img-mobile .mfp-bottom-bar:empty {
 		padding: 0;
 	}
+}
+
+/*------------------------------------------------------------------
+Custom
+ -------------------------------------------------------------------*/
+.brandImage{
+	height: 80px;
+	margin-top: 5px;
 }
