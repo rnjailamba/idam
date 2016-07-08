@@ -5580,7 +5580,13 @@ form fieldset + .btn {
 }
 
 .bg-sl-3 {
-	background-image: url("http://gatwick.aisconverse.com/images/oneimage/portfolio-5.jpg");
+	background-image: url("../images/slider/1.jpg");
+
+}
+
+.bg-sl-8 {
+	background-image: url("../images/slider/2.jpeg");
+
 }
 
 .bg-sl-4 {
