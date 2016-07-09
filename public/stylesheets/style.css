@@ -11255,7 +11255,7 @@ Custom
 .overlay {
    background:transparent;
    position:relative;
-   width:1440px;
+   width:auto;
    height:480px; /* your iframe height */
    top:480px;  /* your iframe height */
    margin-top:-480px;  /* your iframe height */
