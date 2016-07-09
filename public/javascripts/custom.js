@@ -942,43 +942,43 @@
             }
         },
         contactMap: function() {
-            var instance = this;
-
-            if (instance.map.length > 0) {
-                $.each(instance.map, function (index, map) {
-                    var mapContainer = $(map).find('.google-map-container'),
-                        latLong = new google.maps.LatLng(mapContainer.data('latitude'), mapContainer.data('longitude')),
-                        mapOptions = {
-                            zoom: mapContainer.data('zoom'),
-                            scrollwheel: false,
-                            navigationControl: false,
-                            mapTypeControl: false,
-                            scaleControl: false,
-                            draggable: true,
-                            cmyLatlng: latLong,
-                            center: latLong
-                        },
-                        googleMap = new google.maps.Map(mapContainer.get(0), mapOptions);
-
-                    new google.maps.Marker({
-                        position: latLong,
-                        map: googleMap
-                    });
-
-                    $('.a-map').on('click', function () {
-                        var self = $(this),
-                            popupContainer = $(self.attr('href')),
-                            mapPopup = popupContainer.find('.google-map-popup');
-
-                        setTimeout(function () {
-                            new google.maps.Marker({
-                                position: latLong,
-                                map: new google.maps.Map(mapPopup.get(0), mapOptions)
-                            });
-                        }, 200);
-                    });
-                });
-            }
+            // var instance = this;
+            //
+            // if (instance.map.length > 0) {
+            //     $.each(instance.map, function (index, map) {
+            //         var mapContainer = $(map).find('.google-map-container'),
+            //             latLong = new google.maps.LatLng(mapContainer.data('latitude'), mapContainer.data('longitude')),
+            //             mapOptions = {
+            //                 zoom: mapContainer.data('zoom'),
+            //                 scrollwheel: false,
+            //                 navigationControl: false,
+            //                 mapTypeControl: false,
+            //                 scaleControl: false,
+            //                 draggable: true,
+            //                 cmyLatlng: latLong,
+            //                 center: latLong
+            //             },
+            //             googleMap = new google.maps.Map(mapContainer.get(0), mapOptions);
+            //
+            //         new google.maps.Marker({
+            //             position: latLong,
+            //             map: googleMap
+            //         });
+            //
+            //         $('.a-map').on('click', function () {
+            //             var self = $(this),
+            //                 popupContainer = $(self.attr('href')),
+            //                 mapPopup = popupContainer.find('.google-map-popup');
+            //
+            //             setTimeout(function () {
+            //                 new google.maps.Marker({
+            //                     position: latLong,
+            //                     map: new google.maps.Map(mapPopup.get(0), mapOptions)
+            //                 });
+            //             }, 200);
+            //         });
+            //     });
+            // }
         },
         chars: function () {
             var instance = this,
