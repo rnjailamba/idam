@@ -38,7 +38,8 @@
         $win.appear();
 
         $win.load(function () {
-            that.preloader.delay(defaults.speedAnimation * 1.5)
+            console.log("loaded");
+            that.preloader.delay(defaults.speedAnimation * 0.1)
                 .fadeOut(defaults.speedAnimation / 2);
 
             that.activate();
