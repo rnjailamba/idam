@@ -39,7 +39,7 @@
 
         $win.load(function () {
             console.log("loaded");
-            that.preloader.delay(defaults.speedAnimation * 0.1)
+            that.preloader.delay(defaults.speedAnimation * 0.5)
                 .fadeOut(defaults.speedAnimation / 2);
 
             that.activate();
