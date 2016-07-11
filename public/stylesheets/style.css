@@ -5580,12 +5580,19 @@ form fieldset + .btn {
 }
 
 .bg-sl-3 {
-	background-image: url("../images/slider/1.jpg");
+  background-image:url("../images/slider/1.jpg");
+
 
 }
 
 .bg-sl-8 {
-	background-image: url("../images/slider/2.jpeg");
+	background-image:
+
+		linear-gradient(
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.5)
+			),
+			url("../images/slider/2.jpeg");
 
 }
 
@@ -11259,4 +11266,14 @@ Custom
    height:480px; /* your iframe height */
    top:480px;  /* your iframe height */
    margin-top:-480px;  /* your iframe height */
+}
+
+.middle.firstSlide{
+   background: rgba(0, 0, 0, 0.75);
+	 display: inline;
+	padding: 0.5rem;
+
+	/* Needs prefixing */
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
