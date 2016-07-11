@@ -1,6 +1,6 @@
 #Deploy to heroku
   - https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app
-  - https://idam.herokuapp.com/
+  - http://idam.herokuapp.com/ - development happening here
 
 ## Folder Structure
 ```
