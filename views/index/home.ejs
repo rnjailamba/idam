@@ -15,6 +15,40 @@
 	<link href="/css/style.css" rel="stylesheet">
 	<!-- Gatwick - Responsive Multipurpose Template - v.1.2-->
 </head>
+<style>
+.modal-dialog .close-button {
+  overflow: hidden;
+}
+.modal-dialog .close-button button.close {
+  font-size: 30px;
+  line-height: 30px;
+  padding: 7px 4px 7px 13px;
+  text-shadow: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  color: #fff;
+}
+.modal-dialog .close-button button.close span {
+  display: block;
+}
+.modal-dialog .close-button button.close:hover, .modal-dialog .close-button button.close:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  outline: none;
+}
+.modal-dialog .modal-content {
+  box-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.modal-dialog .modal-content iframe {
+  display: block;
+  margin: 0 auto;
+}
+.modal-dialog {
+    top: 15%;
+}
+</style>
 <body>
 
 <!-- Preloader -->
@@ -27,7 +61,8 @@
       <a href="/" class="navbar-brand fig text-center pull-left"><img class = "brandImage" src="/img/logo/logo.gif" alt=""></a>
       <!-- <a href="/" class="navbar-brand">Idam Learning</a> -->
 			<div class="cart-list pull-right">
-				<a href="#portfolio-modal-3" data-toggle="modal"><span>Quiz!</span> <ins>3</ins></a>
+				<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE-hF04tqgcKZxEyZvJrAhRr_MsrGAzdunCF7EE93x7ar7CQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
+				<a class="modalButton" data-toggle="modal" data-src="https://docs.google.com/forms/d/e/1FAIpQLSeE-hF04tqgcKZxEyZvJrAhRr_MsrGAzdunCF7EE93x7ar7CQ/viewform?embedded=true" data-width="500" data-height="500" data-target="#myModal" data-video-fullscreen=""><span>Quiz!</span> <ins>3</ins></a>
 			</div>
 			<button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
 				<span class="icon-bar"></span>
@@ -61,15 +96,20 @@
 </header>
 <!-- /.header -->
 <!-- Modal -->
-<div class="modal" id="portfolio-modal-3">
-	<a href="" class="mfp-close" data-dismiss="modal"></a>
-	<div class="modal-dialog modal-lg">
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
 		<div class="modal-content">
-			<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE-hF04tqgcKZxEyZvJrAhRr_MsrGAzdunCF7EE93x7ar7CQ/viewform?embedded=true"
-				width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
-		</div>
-	</div>
-</div>
+			<div class="modal-body">
+				<div class="close-button">
+							 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="embed-responsive embed-responsive-16by9">
+										<iframe class="embed-responsive-item" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <!-- /.modal -->
 <!-- WRAPPER -->
 <div class="wrapper no-margin">
@@ -626,6 +666,42 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/plugins.js"></script>
 <script src="/js/custom.js"></script>
+<script>
+( function($) {
+
+function iframeModalOpen(){
+
+		// impostiamo gli attributi da aggiungere all'iframe es: data-src andrà ad impostare l'url dell'iframe
+		$('.modalButton').on('click', function(e) {
+			var src = $(this).attr('data-src');
+			var width = $(this).attr('data-width') || 640; // larghezza dell'iframe se non impostato usa 640
+			var height = $(this).attr('data-height') || 360; // altezza dell'iframe se non impostato usa 360
+
+			var allowfullscreen = $(this).attr('data-video-fullscreen'); // impostiamo sul bottone l'attributo allowfullscreen se è un video per permettere di passare alla modalità tutto schermo
+
+			// stampiamo i nostri dati nell'iframe
+			$("#myModal iframe").attr({
+				'src': src,
+				'height': height,
+				'width': width,
+				'allowfullscreen':''
+			});
+		});
+
+		// se si chiude la modale resettiamo i dati dell'iframe per impedire ad un video di continuare a riprodursi anche quando la modale è chiusa
+		$('#myModal').on('hidden.bs.modal', function(){
+			$(this).find('iframe').html("");
+			$(this).find('iframe').attr("src", "");
+		});
+	}
+
+  $(document).ready(function(){
+		iframeModalOpen();
+  });
+
+  } ) ( jQuery );
+</script>
+
 <!-- <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&#038;sensor=false&#038;ver=1"></script> -->
 </body>
 </html>
