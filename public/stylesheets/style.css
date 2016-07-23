@@ -11104,7 +11104,7 @@ ul.twitter-list .date {
 
 	.header .cart-list .dropdown-menu {
 		width: 290px;
-		/*right: -25px;*/
+		right: -25px;
 	}
 
 	.header .cart-list .dropdown-menu li {
