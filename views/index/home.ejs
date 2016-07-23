@@ -686,7 +686,8 @@ function iframeModalOpen(){
 				'src': src,
 				'height': height,
 				'width': width,
-				'allowfullscreen':''
+				'allowfullscreen':'',
+				'overflow-y': ''
 			});
 		});
 
@@ -700,6 +701,8 @@ function iframeModalOpen(){
   $(document).ready(function(){
 		iframeModalOpen();
   });
+	$('body').css('overflow','hidden');
+  $('body').css('position','fixed');
 
   } ) ( jQuery );
 </script>
