@@ -27,6 +27,12 @@ router.get('/a', function(req, res){
 
 });
 
+router.get('/b', function(req, res){
+
+    res.render('index/b', { title: 'Express' });
+
+});
+
 
 var justPrintSomething = function(){
     console.log("print something");
