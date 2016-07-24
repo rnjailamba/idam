@@ -9572,7 +9572,7 @@ ul.twitter-list .date {
 	.header {
 		height: auto;
 		position: relative;
-		z-index: 1030;
+		z-index: 2;
 	}
 
 	.vertical-menu .header {
