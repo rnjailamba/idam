@@ -45,6 +45,18 @@ router.get('/gallery', function(req, res){
 
 });
 
+router.get('/faq', function(req, res){
+
+    res.render('index/faq', { title: 'Express' });
+
+});
+
+router.get('/contact', function(req, res){
+
+    res.render('index/contact', { title: 'Express' });
+
+});
+
 
 var justPrintSomething = function(){
     console.log("print something");

@@ -32,7 +32,7 @@
 }
 
 .inforow{
-  margin-top: 200px;
+  margin-top: 100px;
 }
 @media screen and (max-width: 991px){
   .inforow{
@@ -45,12 +45,11 @@
 	}
 }
 </style>
-<body class="archive">
+<body>
 
 <!-- Preloader -->
 <div class="preloader"></div>
 
-<!-- HEADER -->
 <header class="header header-light header-float navbar-fixed-top ">
 	<nav class="navbar container">
 		<div class="col-sm-12">
@@ -77,7 +76,7 @@
 					<li class="dropdown ">
 						<a href="/gallery">Gallery</a>
 					</li>
-					<li class="dropdown dropdown-static ">
+					<li class="dropdown dropdown-static active ">
 						<a href="/contact">Contact</a>
 					</li>
           <li class="dropdown dropdown-static ">
@@ -102,101 +101,80 @@
 <div class="wrapper border">
 
 
-  <div class="timeline inforow appear-wrap">
-		<div class="row">
-			<div class="col-sm-10 col-sm-offset-1 text-center">
-				<h2>GALLERY</h2>
-      </div>
-    </div>
-  </div>
+
 	<!-- CONTAINER -->
-	<div class="container masonry-wrap">
-		<div class="col-xs-6 post msnr format-image">
-			<a href=""><img src="http://gatwick.aisconverse.com/images/gallery/ga-md-2.jpg" alt=""></a>
-			<p>As your eyes move across these lines and funnel information to your brain.</p>
+	<div class="container inforow">
+		<div class="col-sm-4">
+			<div class="icon icon-default" data-icon="G"></div>
+			<h4>New York Office</h4>
+			<address>
+				<p>Address: 350 Fifth Avenue, 34th floor New York, NY 10118-3299 USA</p>
+			</address>
 		</div>
-    <div class="col-xs-6 post msnr format-image">
-			<h3>
-				<a href="../../blog/blog_post_image.html">Good Practices Of Design</a>
-			</h3>
-			<div class="meta">
-				<small><i class="fa fa-calendar"></i>29 March, 2015</small>
-			</div>
-			<img src="http://gatwick.aisconverse.com/images/gallery/ga-md-12.jpg" alt="">
-			<p>As your eyes move across these lines and funnel information to your brain, you’re taking part in a conversation I started with you.</p>
+		<div class="col-sm-4">
+			<div class="icon icon-default" data-icon="Q"></div>
+			<h4>Phones &amp; Email</h4>
+			<dl class="dl-horizontal">
+				<dt>Phone:</dt>
+				<dd>
+					<p>+370 212 290 4700 <br/>
+						+370 212 736 1300
+					</p>
+				</dd>
+				<dt>Fax:</dt>
+				<dd>
+					<p>+370 212 290 4700</p>
+				</dd>
+				<dt>Email:</dt>
+				<dd>
+					<p>
+						<a href="mailto:info@sample.com">info@sample.com</a>
+					</p>
+				</dd>
+			</dl>
 		</div>
-		<div class="col-xs-6 post msnr format-gallery">
-			<h3>
-				<a href="../../blog/blog_post_gallery_no_sidebar.html">Scaling Down Methodology For Projects</a>
-			</h3>
-			<div class="meta">
-				<small><i class="fa fa-calendar"></i>07 March, 2015</small>
-				<a href=""><i class="fa fa-comment"></i>0</a>
+		<div class="col-sm-4">
+			<div class="icon icon-default" data-icon="2"></div>
+			<h4>Contact Information</h4>
+			<p>We work from 8:00 AM till 5:00 PM (UTC+02:00).</p>
+		</div>
+	</div>
+	<!-- /.container -->
+
+
+	<!-- CONTAINER -->
+	<div class="container inforow">
+		<div class="col-sm-4">
+			<h3>Contact Form</h3>
+			<p>Ea nec enim accumsan, ut prima blandit mel, labores nonumes detraxit an sed. Omnis malis propriae an sed, eu mea erat utinam meliore, inciderint philosophia usu ne.</p>
+			<p>Laudem labores eu sed, vix in omnis habemus omnesque. Enim accumsan, ut prima blandit me.</p>
+		</div>
+		<div class="col-sm-7 col-sm-offset-1">
+	<form action="../../../php/email.php" method="post" id="send-form" class="send-form" novalidate>
+		<div class="form-wrap">
+			<div class="form-group">
+				<input type="text" name="name" id="send-form-name" placeholder="Name" required>
 			</div>
-			<div class="slider oneslider">
-				<ul>
-					<li>
-						<a href=""><img src="http://gatwick.aisconverse.com/images/mockup/bridge-1.jpg" alt=""></a>
-					</li>
-					<li>
-						<a href=""><img src="http://gatwick.aisconverse.com/images/mockup/bridge-2.jpg" alt=""></a>
-					</li>
-					<li>
-						<a href=""><img src="http://gatwick.aisconverse.com/images/mockup/bridge-3.jpg" alt=""></a>
-					</li>
-				</ul>
-				<nav class="nav-pages"></nav>
+			<div class="form-group">
+				<input type="email" name="email" id="send-form-email" placeholder="Email" required>
+			</div>
+			<div class="form-group">
+				<select id="send-form-select" name="send-form-select">
+					<option value="Interface Issue">Interface Issue</option>
+					<option value="Design">Design</option>
+					<option value="Production">Production</option>
+					<option value="Photography">Photography</option>
+					<option value="Web development">Web development</option>
+					<option value="Front-end">Front-end</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<textarea name="message" placeholder="Message" id="send-form-message" required></textarea>
 			</div>
 		</div>
-		<div class="col-xs-6 post msnr format-video">
-			<h3>
-				<a href="../../blog/blog_post_video_vimeo.html">The Mystery Of Basic Introduction</a>
-			</h3>
-			<div class="meta">
-				<small><i class="fa fa-calendar"></i>09 March, 2015</small>
-				<a href=""><i class="fa fa-comment"></i>0</a>
-			</div>
-			<div class="embed-responsive embed-responsive-16by9">
-				<iframe src="http://player.vimeo.com/video/99585787?title=0&amp;byline=0&amp;portrait=0&amp;color=e79501" allowfullscreen></iframe>
-			</div>
-			<p>Putting these words into context. And whether you’re reading this book on paper, on a device, or at your desk.</p>
-		</div>
-		<div class="col-xs-6 post msnr format-video">
-			<h3>
-				<a href="../../blog/blog_post_video_youtube.html">Stop Wasting Time</a>
-			</h3>
-			<div class="meta">
-				<small><i class="fa fa-calendar"></i>12 December, 2015</small>
-				<a href=""><i class="fa fa-comment"></i>349</a>
-			</div>
-			<div class="embed-responsive embed-responsive-16by9">
-				<iframe src="http://www.youtube.com/embed/PELlHslllk0?feature=player_embedded" allowfullscreen></iframe>
-			</div>
-			<p>Putting these words into context. And whether you’re reading this book on paper, on a device, or at your desk, your environment your experience too.</p>
-		</div>
-		<div class="col-xs-6 post msnr format-gallery">
-			<h3>
-				<a href="../../blog/blog_post_gallery_facebook.html">Collaborating With Adobe Fireworks</a>
-			</h3>
-			<div class="meta">
-				<small><i class="fa fa-calendar"></i>07 March, 2015</small>
-				<a href=""><i class="fa fa-comment"></i>0</a>
-			</div>
-			<div class="slider oneslider">
-				<ul>
-					<li>
-						<a href=""><img src="http://gatwick.aisconverse.com/images/mockup/island-1.jpg" alt=""></a>
-					</li>
-					<li>
-						<a href=""><img src="http://gatwick.aisconverse.com/images/mockup/island-2.jpg" alt=""></a>
-					</li>
-					<li>
-						<a href=""><img src="http://gatwick.aisconverse.com/images/mockup/island-3.jpg" alt=""></a>
-					</li>
-				</ul>
-				<nav class="nav-pages"></nav>
-			</div>
-			<p>I want you to think about what you’re doing right now. I mean really think about it. As your eyes move across these lines and funnel information.</p>
+		<button type="submit" class="btn btn-primary btn-wd">Send</button>
+		<p class="succs-msg">Мessage was sent</p>
+	</form>
 		</div>
 	</div>
 	<!-- /.container -->
@@ -265,9 +243,20 @@
 </footer>
 <!-- /.footer -->
 
+<!-- Modal -->
+<div class="modal map-modal" id="google-map-popup">
+	<a href="#" class="map-close" data-dismiss="modal"><i></i></a>
+	<div class="google-map-popup"></div>
+</div>
+<!-- /.modal -->
+
 <!-- ScrollTop -->
 <a href="#" class="scrolltop"><i></i></a>
 
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/plugins.js"></script>
+<script src="/js/custom.js"></script>
 <script>
 ( function($) {
   // $('body').css('position','fixed');
@@ -284,10 +273,7 @@ $("#modal").iziModal({
 
   } ) ( jQuery );
 </script>
-<!-- SCRIPTS -->
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/plugins.js"></script>
-<script src="/js/custom.js"></script>
-<script>
+
+<!-- <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&#038;sensor=false&#038;ver=1"></script> -->
 </body>
 </html>
