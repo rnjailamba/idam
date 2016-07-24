@@ -39,6 +39,12 @@ router.get('/timeline', function(req, res){
 
 });
 
+router.get('/gallery', function(req, res){
+
+    res.render('index/gallery', { title: 'Express' });
+
+});
+
 
 var justPrintSomething = function(){
     console.log("print something");
