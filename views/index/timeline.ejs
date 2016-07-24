@@ -60,19 +60,19 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<li class="dropdown active">
-						<a href="" class="dropdown-toggle" data-toggle="dropdown">Home</a>
-					</li>
-					<li class="dropdown ">
-						<a href="" class="dropdown-toggle" data-toggle="dropdown">About</a>
+						<a href="/" class="dropdown-toggle" data-toggle="dropdown">Home</a>
 					</li>
 					<li class="dropdown ">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+					</li>
+					<li class="dropdown ">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Gallery</a>
 					</li>
 					<li class="dropdown dropdown-static ">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
 					</li>
           <li class="dropdown dropdown-static ">
-						<a href="" class="dropdown-toggle" data-toggle="dropdown">Surprise</a>
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">Links</a>
 					</li>
           <li class="dropdown dropdown-static ">
 						<a href="" class="dropdown-toggle" data-toggle="dropdown">Resources</a>
@@ -83,7 +83,9 @@
 	</nav>
 </header>
 <!-- /.header -->
-
+<div id="modal">
+    <!-- Page content -->
+</div>
 <!-- WRAPPER -->
 <div class="wrapper border">
 	<!-- /.headcontent -->
@@ -341,7 +343,22 @@
 
 <!-- ScrollTop -->
 <a href="#" class="scrolltop"><i></i></a>
+<script>
+( function($) {
+  // $('body').css('position','fixed');
+	$(document).on('click', '.trigger', function (event) {
+    event.preventDefault();
+    $('#modal').iziModal('open', this); // Do not forget the "this"
+});
+$("#modal").iziModal({
+		title: 'Quiz',
+		headerColor: '#3498db',
+    iframe: true,
+    iframeURL: "https://docs.google.com/forms/d/e/1FAIpQLSeE-hF04tqgcKZxEyZvJrAhRr_MsrGAzdunCF7EE93x7ar7CQ/viewform?embedded=true"
+});
 
+  } ) ( jQuery );
+</script>
 <!-- SCRIPTS -->
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/plugins.js"></script>
