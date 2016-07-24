@@ -5,7 +5,7 @@
             sliderFx: 'crossfade',		// Slider effect. Can be 'scroll',
             // 'fade', 'crossfade', 'directscroll',
             // 'uncover', 'uncover-fade'
-            sliderInterval: 3000,		// Interval
+            sliderInterval: 6000,		// Interval
             sliderAuto: true,        // Default auto sliding
             speedAnimation: 600,        // Default speed of the animation
             defFx: 'easeInSine',        // Default animate Fx
