@@ -64,6 +64,13 @@ router.get('/services', function(req, res){
 });
 
 
+router.get('/links', function(req, res){
+
+    res.render('index/links', { title: 'Express' });
+
+});
+
+
 var justPrintSomething = function(){
     console.log("print something");
 }
