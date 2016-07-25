@@ -57,6 +57,12 @@ router.get('/contact', function(req, res){
 
 });
 
+router.get('/services', function(req, res){
+
+    res.render('index/services', { title: 'Express' });
+
+});
+
 
 var justPrintSomething = function(){
     console.log("print something");
