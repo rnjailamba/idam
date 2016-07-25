@@ -11294,3 +11294,7 @@ Custom
 
 	}
 }
+
+.header-light .navbar-nav > li > a.activeNav{
+    color: #3498db;
+}
