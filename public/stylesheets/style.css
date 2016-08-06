@@ -5581,18 +5581,39 @@ form fieldset + .btn {
 }
 
 .bg-sl-3 {
-  background-image:url("../images/slider/1.jpg");
+  background-image:url("../images/slider/photo3_l.jpg");
+
+
+}
+
+.bg-sl-9 {
+  /*background-image:
+	linear-gradient(
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)
+		),
+	url("../images/slider/photo2_l.jpg");*/
+
+	background-image:url("../images/slider/photo1_l.jpg");
+
+
+}
+
+.bg-sl-10 {
+  /*background-image:
+	linear-gradient(
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)
+		),
+	url("../images/slider/photo2_l.jpg");*/
+
+	background-image:url("../images/slider/photo2_l.jpg");
 
 
 }
 
 .bg-sl-8 {
 	background-image:
-
-		linear-gradient(
-				rgba(0, 0, 0, 0.5),
-				rgba(0, 0, 0, 0.5)
-			),
 			url("../images/slider/2.jpeg");
 
 }
