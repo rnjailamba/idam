@@ -717,6 +717,13 @@
 	if( isIE == true ){
 		$('.preloader').hide();
 	}
+	if(  document.addEventListener  ){
+			//  alert("you got IE9 or greater");
+	 }
+	 else{
+		 window.location.replace("http://idamlearning.com");
+
+	 }
 </script>
 
 <!-- <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&#038;sensor=false&#038;ver=1"></script> -->
