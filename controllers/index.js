@@ -39,7 +39,7 @@ router.get('/timeline', function(req, res){
 
 });
 
-router.get('/gallery', function(req, res){
+router.get('/galleryIdam', function(req, res){
 
     res.render('index/gallery', { title: 'Express' });
 
@@ -51,13 +51,13 @@ router.get('/faq', function(req, res){
 
 });
 
-router.get('/contact', function(req, res){
+router.get('/contactIdam', function(req, res){
 
     res.render('index/contact', { title: 'Express' });
 
 });
 
-router.get('/services', function(req, res){
+router.get('/servicesIdam', function(req, res){
 
     res.render('index/services', { title: 'Express' });
 
