@@ -38,7 +38,7 @@
         $win.appear();
 
         $win.load(function () {
-            console.log("loaded");
+            // console.log("loaded");
             that.preloader.delay(defaults.speedAnimation * 1.5)
                 .fadeOut(defaults.speedAnimation / 2);
 
@@ -788,7 +788,7 @@
                     }
                 } else {
                     if (!instance.header.hasClass('not-sticky')) {
-                        console.log('!@#$%')
+                        // console.log('!@#$%')
                         instance.header.addClass('navbar-fixed-top');
                     }
 
