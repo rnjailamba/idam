@@ -81,7 +81,7 @@
 </header>
 <!-- /.header -->
 
-<div id="modal">
+<div id="lemodal">
     <!-- Page content -->
 </div>
 <!-- /.modal -->
@@ -674,10 +674,10 @@
 <a href="#" class="scrolltop"><i></i></a>
 
 <!-- Modal -->
-<div class="modal map-modal" id="google-map-popup">
+<!-- <div class="modal map-modal" id="google-map-popup">
 	<a href="#" class="map-close" data-dismiss="modal"><i></i></a>
 	<div class="google-map-popup"></div>
-</div>
+</div> -->
 <!-- /.modal -->
 
 <!-- SCRIPTS -->
@@ -692,9 +692,9 @@
   // $('body').css('position','fixed');
 	$(document).on('click', '.trigger', function (event) {
     event.preventDefault();
-    $('#modal').iziModal('open', this); // Do not forget the "this"
+    $('#lemodal').iziModal('open', this); // Do not forget the "this"
 });
-$("#modal").iziModal({
+$("#lemodal").iziModal({
 		title: 'Quiz',
 		headerColor: '#3498db',
     iframe: true,
