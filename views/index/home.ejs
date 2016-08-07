@@ -688,20 +688,17 @@
 <script src="/js/plugins.js"></script>
 <script src="/js/custom.js"></script>
 <script>
-( function($) {
-  // $('body').css('position','fixed');
+
 	$(document).on('click', '.trigger', function (event) {
     event.preventDefault();
     $('#lemodal').iziModal('open', this); // Do not forget the "this"
-});
-$("#lemodal").iziModal({
-		title: 'Quiz',
-		headerColor: '#3498db',
-    iframe: true,
-    iframeURL: "https://docs.google.com/forms/d/e/1FAIpQLSeE-hF04tqgcKZxEyZvJrAhRr_MsrGAzdunCF7EE93x7ar7CQ/viewform?embedded=true"
-});
-
-  } ) ( jQuery );
+	});
+	$("#lemodal").iziModal({
+			title: 'Quiz',
+			headerColor: '#3498db',
+	    iframe: true,
+	    iframeURL: "https://docs.google.com/forms/d/e/1FAIpQLSeE-hF04tqgcKZxEyZvJrAhRr_MsrGAzdunCF7EE93x7ar7CQ/viewform?embedded=true"
+	});
 
 	var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 			// Firefox 1.0+
