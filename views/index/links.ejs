@@ -82,7 +82,7 @@
 						<a class=" activeNav" href="/links">Links</a>
 					</li>
           <li class="">
-						
+
 					</li>
 				</ul>
 			</div>
@@ -335,6 +335,23 @@ $("#modal").iziModal({
 });
 
   } ) ( jQuery );
+	var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+			// Firefox 1.0+
+	var isFirefox = typeof InstallTrigger !== 'undefined';
+			// At least Safari 3+: "[object HTMLElementConstructor]"
+	var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+			// Internet Explorer 6-11
+	var isIE = /*@cc_on!@*/false || !!document.documentMode;
+			// Edge 20+
+	var isEdge = !isIE && !!window.StyleMedia;
+			// Chrome 1+
+	var isChrome = !!window.chrome && !!window.chrome.webstore;
+			// Blink engine detection
+	var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+	if( isIE == true ){
+		$('.preloader').hide();
+	}	
 </script>
 
 <!-- <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&#038;sensor=false&#038;ver=1"></script> -->
