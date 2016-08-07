@@ -70,6 +70,12 @@ router.get('/links', function(req, res){
 
 });
 
+router.get('/aboutIdam', function(req, res){
+
+    res.render('index/aboutIdam', { title: 'Express' });
+
+});
+
 
 var justPrintSomething = function(){
     console.log("print something");
