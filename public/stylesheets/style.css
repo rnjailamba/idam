@@ -5612,6 +5612,19 @@ form fieldset + .btn {
 
 }
 
+.bg-sl-11 {
+  /*background-image:
+	linear-gradient(
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)
+		),
+	url("../images/slider/photo2_l.jpg");*/
+
+	background-image:url("../images/slider/photo5_l.jpg");
+
+
+}
+
 .bg-sl-8 {
 	background-image:
 			url("../images/slider/2.jpeg");
