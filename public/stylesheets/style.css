@@ -5581,7 +5581,7 @@ form fieldset + .btn {
 }
 
 .bg-sl-3 {
-  background-image:url("../images/slider/photo3_l.jpg");
+  background-image:url("../imgNew/slider/photo3_l.jpg");
 
 
 }
@@ -5592,9 +5592,9 @@ form fieldset + .btn {
 			rgba(0, 0, 0, 0.5),
 			rgba(0, 0, 0, 0.5)
 		),
-	url("../images/slider/photo2_l.jpg");*/
+	url("../imgNew/slider/photo2_l.jpg");*/
 
-	background-image:url("../images/slider/photo1_l.jpg");
+	background-image:url("../imgNew/slider/photo1_l.jpg");
 
 
 }
@@ -5605,9 +5605,9 @@ form fieldset + .btn {
 			rgba(0, 0, 0, 0.5),
 			rgba(0, 0, 0, 0.5)
 		),
-	url("../images/slider/photo2_l.jpg");*/
+	url("../imgNew/slider/photo2_l.jpg");*/
 
-	background-image:url("../images/slider/blur1.jpg");
+	background-image:url("../imgNew/slider/blur1.jpg");
 
 
 }
@@ -5618,16 +5618,16 @@ form fieldset + .btn {
 			rgba(0, 0, 0, 0.5),
 			rgba(0, 0, 0, 0.5)
 		),
-	url("../images/slider/photo2_l.jpg");*/
+	url("../imgNew/slider/photo2_l.jpg");*/
 
-	background-image:url("../images/slider/photo5_l.jpg");
+	background-image:url("../imgNew/slider/photo5_l.jpg");
 
 
 }
 
 .bg-sl-8 {
 	background-image:
-			url("../images/slider/2.jpeg");
+			url("../imgNew/slider/2.jpeg");
 
 }
 
