@@ -29,10 +29,11 @@ router.get('/a', function(req, res){
 
 });
 
-router.get('/b', function(req, res){
+router.get('/quizIdam*', function(req, res){
 
-    res.render('index/b', { title: 'Express' });
-
+  res.sendFile('quizIdam.html', {
+    root: 'views/index'
+  });
 });
 
 router.get('/timeline', function(req, res){
