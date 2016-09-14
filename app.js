@@ -5,7 +5,7 @@ var app = modules.express();
 // VIEW ENGINE SETUP
 // ==============================================
 app.set('views', modules.path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');// set up ejs for templating
+app.set('view engine', 'html');// set up ejs for templating
 app.use('/jquery', modules.express.static(__dirname + '/node_modules/jquery/dist/'));
 app.use('/bootstrap', modules.express.static(__dirname + '/node_modules/bootstrap/dist/'));
 app.use('/node_modules', modules.express.static(__dirname + '/node_modules/'));
@@ -51,25 +51,25 @@ app.use(function(req, res, next) {
 // error handlers
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
+// if (app.get('env') === 'development') {
+//   app.use(function(err, req, res, next) {
+//     res.status(err.status || 500);
+//     res.render('error', {
+//       message: err.message,
+//       error: err
+//     });
+//   });
+// }
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
+// app.use(function(err, req, res, next) {
+//   res.status(err.status || 500);
+//   res.render('error', {
+//     message: err.message,
+//     error: {}
+//   });
+// });
 console.log("hellonew");
 
 module.exports = app;

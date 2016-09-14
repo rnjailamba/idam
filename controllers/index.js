@@ -17,8 +17,10 @@ modules.winston.log('debug', 'Hello again distributed log files!');
 // ==============================================
 router.get('/', function(req, res){
 
-    res.render('index/home', { title: 'Express' });
-
+    // res.render('index/home', { title: 'Express' });
+    res.sendFile('home.html', {
+      root: 'views/index'
+    });
 });
 
 router.get('/a', function(req, res){
@@ -41,39 +43,45 @@ router.get('/timeline', function(req, res){
 
 router.get('/galleryIdam', function(req, res){
 
-    res.render('index/gallery', { title: 'Express' });
-
+  res.sendFile('gallery.html', {
+    root: 'views/index'
+  });
 });
 
 router.get('/faq', function(req, res){
 
-    res.render('index/faq', { title: 'Express' });
-
+  res.sendFile('faq.html', {
+    root: 'views/index'
+  });
 });
 
 router.get('/contactIdam', function(req, res){
 
-    res.render('index/contact', { title: 'Express' });
-
+  res.sendFile('contact.html', {
+    root: 'views/index'
+  });
 });
 
 router.get('/servicesIdam', function(req, res){
 
-    res.render('index/services', { title: 'Express' });
-
+  res.sendFile('services.html', {
+    root: 'views/index'
+  });
 });
 
 
 router.get('/links', function(req, res){
 
-    res.render('index/links', { title: 'Express' });
-
+  res.sendFile('links.html', {
+    root: 'views/index'
+  });
 });
 
 router.get('/aboutIdam', function(req, res){
 
-    res.render('index/aboutIdam', { title: 'Express' });
-
+  res.sendFile('aboutIdam.html', {
+    root: 'views/index'
+  });
 });
 
 
