@@ -43,7 +43,7 @@ router.get('/timeline', function(req, res){
 
 router.get('/galleryIdam*', function(req, res){
 
-  res.sendFile('gallery.html', {
+  res.sendFile('galleryIdam.html', {
     root: 'views/index'
   });
 });
@@ -57,14 +57,14 @@ router.get('/faq*', function(req, res){
 
 router.get('/contactIdam*', function(req, res){
 
-  res.sendFile('contact.html', {
+  res.sendFile('contactIdam.html', {
     root: 'views/index'
   });
 });
 
 router.get('/servicesIdam*', function(req, res){
 
-  res.sendFile('services.html', {
+  res.sendFile('servicesIdam.html', {
     root: 'views/index'
   });
 });
