@@ -25,8 +25,9 @@ router.get('/', function(req, res){
 
 router.get('/a', function(req, res){
 
-    res.render('index/a', { title: 'Express' });
-
+  res.sendFile('contactDemo.html', {
+    root: 'views/index'
+  });
 });
 
 router.get('/quizIdam*', function(req, res){
