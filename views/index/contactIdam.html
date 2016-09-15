@@ -111,20 +111,21 @@
 			<form   id="foo"  >
 				<div class="form-wrap">
 					<div class="form-group">
-						<input type="text" name="Name" id="fname" placeholder="Name">
+						<input type="text" name="name" id="fname" placeholder="Name">
 					</div>
 					<div class="form-group">
-						<input type="email" name="EMail" id="femail" placeholder="Email" required>
+						<input type="email" name="email" id="femail" placeholder="Email" required>
 					</div>
 					<div class="form-group">
-						<input name="Telephone" type="text" placeholder="Telephone" id="fphone" />
+						<input name="phone"  type="text" placeholder="Telephone" id="fphone" />
 					</div>
 					<div class="form-group">
-						<textarea name="Message" placeholder="Message" id="fmessage"></textarea>
+						<textarea name="message"  placeholder="Message" id="fmessage"></textarea>
 					</div>
+
 				</div>
 
-				<button  onclick="myFunction(event)" id= "fbutton" class="btn btn-info" >Send</button>
+				<button  onclick="myFunction(event)" id= "fbutton" class="btn btn-primary" >Send</button>
 				<p class="succs-msg">Мessage was sent</p>
 			</form>
 		</div>
@@ -307,14 +308,40 @@
 	}
 	function myFunction(e){
 		e.preventDefault();
-		alert("JQuery Running!");
-
 		console.log("button clicked");
 		var name = $('#fname').val();
 		var phone = $('#fphone').val();
 		var email = $('#femail').val();
 		var message = $('#fmessage').val();
 		console.log(name,phone,email,message);
+
+		var $form = $("#foo");
+		var $inputs = $form.find("input, select, button, textarea");
+		var serializedData = $form.serialize();
+		console.log(serializedData);
+		$inputs.prop("disabled", true);
+		$('#result').text('Sending data...');
+		request = $.ajax({
+			url: "https://script.google.com/macros/s/AKfycbzQUDS7aFThgbAiu7vDcSpgV3HM3PEJGr6JIoLfOBKlfgzVKmfV/exec",  // clone
+			type: "post",
+			data: serializedData
+		});
+		request.done(function (response, textStatus, jqXHR){
+			console.log(response, textStatus, jqXHR);
+			$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
+		});
+		// callback handler that will be called on failure
+		request.fail(function (jqXHR, textStatus, errorThrown){
+			console.error(
+				"The following error occured: "+
+				textStatus, errorThrown
+			);
+		});
+		request.always(function () {
+			$inputs.prop("disabled", false);
+		});
+		event.preventDefault();
+
 
 
 	}
