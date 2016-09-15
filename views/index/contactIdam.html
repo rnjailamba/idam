@@ -16,7 +16,6 @@
 	<link href="/cssNew/style.css" rel="stylesheet">
 	<script src="/jsNew/jquery-2.1.3.min.js"></script>
 	<script src="/jsNew/iziModal.js"></script>
-	<script src="js/jquery.form.js" type="text/javascript"></script>
 
 	<!-- Gatwick - Responsive Multipurpose Template - v.1.2-->
 </head>
@@ -109,41 +108,27 @@
 			<!-- <p>Laudem labores eu sed, vix in omnis habemus omnesque. Enim accumsan, ut prima blandit me.</p> -->
 		</div>
 		<div class="col-sm-7 col-sm-offset-1">
-	<form action="mail.php" method="post" id="contact_form" class="send-form" novalidate>
-		<div class="form-wrap">
-			<div class="form-group">
-				<input type="text" name="Name" id="send-form-name" placeholder="Name">
-			</div>
-			<div class="form-group">
-				<input type="email" name="EMail" id="send-form-email" placeholder="Email" required>
-			</div>
-			<div class="form-group">
-				<input name="Telephone" type="text" placeholder="Telephone" />
-			</div>
-			<div class="form-group">
-				<textarea name="Message" placeholder="Message" id="send-form-message"></textarea>
-			</div>
-		</div>
-		<div class="div_links"><a onclick="$('#contact_form').ajaxSubmit({url:'resources/mail.php', success:function showResponse(responseText, statusText, xhr, $form)  {     alert('Thank you for contacting us.')}}); document.getElementById('contact_form').reset(); return false;" href="#">send</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="document.getElementById('contact_form').reset(); return false;" href="#">clear</a>
+			<form   id="foo"  >
+				<div class="form-wrap">
+					<div class="form-group">
+						<input type="text" name="Name" id="fname" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<input type="email" name="EMail" id="femail" placeholder="Email" required>
+					</div>
+					<div class="form-group">
+						<input name="Telephone" type="text" placeholder="Telephone" id="fphone" />
+					</div>
+					<div class="form-group">
+						<textarea name="Message" placeholder="Message" id="fmessage"></textarea>
+					</div>
+				</div>
 
-		<!-- <button type="submit" class="btn btn-primary btn-wd">Send</button> -->
-		<p class="succs-msg">Мessage was sent</p>
-	</form>
+				<button  onclick="myFunction(event)" id= "fbutton" class="btn btn-info" >Send</button>
+				<p class="succs-msg">Мessage was sent</p>
+			</form>
 		</div>
 	</div>
-
-	<form action="mail.php" method="post" id="contact_form">
-            <div class="indent"> <h3>Drop Us A Line</h3>						Name :<br />
-              <div class="div_input"><input name="Name" type="text" />
-              </div>						E-mail :<br />
-              <div class="div_input"><input name="EMail" type="text" />
-              </div>						Telephone number :<br />
-              <div class="div_input"><input name="Telephone" type="text" />
-              </div>						Message :<br /> <textarea name="Message" cols="0" rows="0" type="textarea"></textarea>
-              <div class="div_links"><a onclick="$('#contact_form').ajaxSubmit({url:'resources/mail.php', success:function showResponse(responseText, statusText, xhr, $form)  {     alert('Thank you for contacting us.')}}); document.getElementById('contact_form').reset(); return false;" href="#">send</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="document.getElementById('contact_form').reset(); return false;" href="#">clear</a>
-              </div>
-            </div>
-	</form>
 	<!-- /.container -->
 
 	<!-- CONTAINER -->
@@ -275,6 +260,10 @@
 <script src="/jsNew/custom.js"></script>
 <script>
 ( function($) {
+
+
+
+
 	var isMobile = false; //initiate as false
 	// device detection
 	if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -316,13 +305,22 @@
 	if( isIE == true ){
 		$('.preloader').hide();
 	}
+	function myFunction(e){
+		e.preventDefault();
+		alert("JQuery Running!");
+
+		console.log("button clicked");
+		var name = $('#fname').val();
+		var phone = $('#fphone').val();
+		var email = $('#femail').val();
+		var message = $('#fmessage').val();
+		console.log(name,phone,email,message);
+
+
+	}
 
 	$(document).ready(function() {
-		$('#form').submit(function() {
-		 alert('Thank you for contacting us.');
-		 $(this).ajaxSubmit(options);
-		 return false;
-		});
+
 	});
 </script>
 
