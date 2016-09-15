@@ -13,3 +13,5 @@ https://github.com/dwyl/web-form-to-google-sheet
 ## Overlay effect
   -  https://miketricking.github.io/dist/
   
+## Zoom
+  - https://codepen.io/afinedayproductions/pen/EzvLp/
