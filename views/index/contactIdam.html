@@ -126,7 +126,8 @@
 				</div>
 
 				<button  onclick="myFunction(event)" id= "fbutton" class="btn btn-primary" >Send</button>
-				<p class="succs-msg">Мessage was sent</p>
+				<p  id="result"></p>
+
 			</form>
 		</div>
 	</div>
@@ -332,7 +333,7 @@
 		});
 		request.done(function (response, textStatus, jqXHR){
 			console.log(response, textStatus, jqXHR);
-			$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
+			$('#result').html('<p>Мessage was sent!</p>');
 		});
 		// callback handler that will be called on failure
 		request.fail(function (jqXHR, textStatus, errorThrown){
