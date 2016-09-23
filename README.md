@@ -1,5 +1,6 @@
 #Deploy to heroku
   - https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app
+  - https://github.com/bmizerany/heroku-docs/blob/master/docs/renaming-apps.txt
   - http://idam.herokuapp.com/ - development happening here
 
 ## Use Excel as a db  
