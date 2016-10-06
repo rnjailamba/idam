@@ -79,6 +79,13 @@ router.get('/links*', function(req, res){
   });
 });
 
+router.get('/resources*', function(req, res){
+
+  res.sendFile('resources.html', {
+    root: 'views/index'
+  });
+});
+
 router.get('/aboutIdam*', function(req, res){
 
   res.sendFile('aboutIdam.html', {
